@@ -57,15 +57,20 @@ variable "fargate_memory" {
 
 variable "dynamo_name" {
   description = "The name of the Dynamo DB table"
-  default = "Dynamo-Table"
+  default = "Gruum-Dynamo-Table"
 }
 
 variable "dynamo_read" {
   description = "Dynamo DB read capacity in GB"
-  default = 20
+  default = 1
 }
 
 variable "dynamo_write" {
   description = "Dynamo DB write capacity in GB"
-  default = 20
+  default = 1
+}
+
+variable "s3_name" {
+  description = "Name of the S3 Bucket"
+  default = "gruum-s3-321341"
 }

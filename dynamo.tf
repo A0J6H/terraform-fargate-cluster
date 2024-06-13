@@ -3,7 +3,7 @@ resource "aws_dynamodb_table" "basic-table-hahtech" {
   billing_mode   = "PROVISIONED"
   read_capacity  = var.dynamo_write
   write_capacity = var.dynamo_write
-  hash_key       = "table_id"
+  hash_key       = "postcode"
 
   attribute {
     name = "postcode"
