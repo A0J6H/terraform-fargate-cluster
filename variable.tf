@@ -27,7 +27,7 @@ variable "az_count" {
 
 variable "app_image" {
     description = "Docker image to run in the ECS cluster"
-    default = "nginx"
+    default = "891377114388.dkr.ecr.eu-central-1.amazonaws.com/app"
 }
 
 variable "app_port" {
@@ -47,10 +47,25 @@ variable "health_check_path" {
 
 variable "fargate_cpu" {
     description = "Fargate instance CPU units to provision (1 vCPU = 1024 CPU units)"
-    default = "562"
+    default = "1024"
 }
 
 variable "fargate_memory" {
     description = "Fargate instance memory to provision (in MiB)"
-    default = "1024"
+    default = "2048"
+}
+
+variable "dynamo_name" {
+  description = "The name of the Dynamo DB table"
+  default = "Dynamo-Table"
+}
+
+variable "dynamo_read" {
+  description = "Dynamo DB read capacity in GB"
+  default = 20
+}
+
+variable "dynamo_write" {
+  description = "Dynamo DB write capacity in GB"
+  default = 20
 }
