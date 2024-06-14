@@ -1,3 +1,4 @@
+#Create DynamoDB Table 
 resource "aws_dynamodb_table" "basic-table-hahtech" {
   name           = var.dynamo_name
   billing_mode   = "PROVISIONED"
